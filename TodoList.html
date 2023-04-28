@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="task-input">
+        <img src="menu-bar.svg" alt="menu-bar" width="20px" />
+        <input type="text" placeholder="Add a new task" />
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <span id="all" class="active">All</span>
+          <span id="all">Pending</span>
+          <span id="all">Completed</span>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+      <ul class="task-box">
+        <li class="task">
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Renew gym membership</p>
+          </label>
+          <div class="settings">
+            <i class="uil uil-ellipsis-h"></i>
+            <ul class="task-menu">
+              <li><i class="uil uil-pen"></i>Edit</li>
+              <li><i class="uil uil-trash"></i>Delete</li>
+            </ul>
+          </div>
+        </li>
+        <li class="task">
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Create a video Youtube</p>
+          </label>
+          <div class="settings">
+            <i class="uil uil-ellipsis-h"></i>
+          </div>
+        </li>
+        <li class="task">
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Write a blog abot trends</p>
+          </label>
+          <div class="settings">
+            <i class="uil uil-ellipsis-h"></i>
+          </div>
+        </li>
+        <li class="task">
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Send poroject file to the client</p>
+          </label>
+          <div class="settings">
+            <i class="uil uil-ellipsis-h"></i>
+          </div>
+        </li>
+        <li class="task">
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Discuss new project with team</p>
+          </label>
+          <div class="settings">
+            <i class="uil uil-ellipsis-h"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
