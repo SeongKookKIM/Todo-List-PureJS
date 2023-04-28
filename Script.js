@@ -7,14 +7,15 @@ function showTodo() {
   let li = "";
   if (todos) {
     todos.reverse().forEach((todo, id) => {
+      let isCompleted = todo.status == "completed" ? "checked" : "";
       li += `
             <li class="task">
             <label for="${id}">
-              <input type="checkbox" id="${id}" />
-              <p>${todo.name}</p>
+              <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${isCompleted} />
+              <p class="${isCompleted}">${todo.name}</p>
             </label>
             <div class="settings">
-              <i class="uil uil-ellipsis-h"></i>
+              <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
               <ul class="task-menu">
                 <li><i class="uil uil-pen"></i>Edit</li>
                 <li><i class="uil uil-trash"></i>Delete</li>
@@ -25,6 +26,23 @@ function showTodo() {
     });
   }
   taskBox.innerHTML = li;
+}
+showTodo();
+
+function showMenu(selectedTask) {
+  console.log(selectedTask);
+}
+
+function updateStatus(selectedTask) {
+  let taskName = selectedTask.parentElement.lastElementChild;
+  if (selectedTask.checked) {
+    taskName.classList.add("checked");
+    todos[selectedTask.id].status = "completed";
+  } else {
+    taskName.classList.remove("checked");
+    todos[selectedTask.id].status = "pending";
+  }
+  localStorage.setItem("todo-list", JSON.stringify(todos));
 }
 
 taskInput.addEventListener("keyup", (e) => {
