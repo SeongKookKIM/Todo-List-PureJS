@@ -111,7 +111,7 @@ li {
   transition: transform 0.2s ease;
   transform-origin: top right;
 }
-.settings:hover .task-menu {
+.settings .task-menu.show {
   transform: scale(1);
 }
 .task-menu li {
